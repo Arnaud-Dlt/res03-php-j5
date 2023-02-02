@@ -14,7 +14,8 @@ class User {
         $this-> email = $email;
     }
     
-    // public getter
+    /// GETTER
+    
     public function getId() : string
     {
         return $this->id;
@@ -36,7 +37,8 @@ class User {
     }
     
 
-    // public setter
+    /// SETTER
+    
     public function setId(int $id) : void
     {
         $this->id = $id;
@@ -62,26 +64,5 @@ class User {
         return this->$firstname.' '. this->$lastname;
     }
 }
-
-$host = "db.3wa.io";
-$port = "3306";
-$dbname = "prenomnom_phpj5";
-$connexionString = "mysql:host=$host;port=$port;dbname=$dbname";
-
-$user = "arnauddeletre";
-$password = "900979afbcfa4468bcb42cce8d75b844";
-
-$db = new PDO(
-    $connexionString,
-    $user,
-    $password
-);
-
-$user = [
-    "firstName" => "Clark",
-    "lastName" => "Kent",
-    "email" => "clark.kent@test.fr"
-];
-
 
 ?>
